@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/banner.jpg");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="hero-image">
+        <div class="hero-text">
+            <p class="h1" id="banner-text">Hello,</p>
+            <div class="input-group">
+                <input type="text" oninput="inputOnchange()" id="user-input" class="form-control" placeholder="Username"
+                    aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <p class="h2 fw-bold">5 places I want to go after MCO</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg pb-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/geroge-town.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">George Town</h5>
+                        <p class="card-text">George Town is the colorful, multicultural capital of the Malaysian island
+                            of Penang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-lg pb-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/langkawi.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Langkawi</h5>
+                        <p class="card-text">Langkawi, officially known as Langkawi, the Jewel of Kedah, is a district
+                            and an archipelago of 99 islands in the Malacca Strait. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg pb-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/petronas-towers.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Petronas Twin Towers</h5>
+                        <p class="card-text">The Petronas Towers, or the Petronas Twin Towers, are twin skyscrapers in
+                            Kuala Lumpur, Malaysia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg pb-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/tokyo-skytree.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo Skytree</h5>
+                        <p class="card-text">Tokyo Skytree is a broadcasting and observation tower in Sumida, Tokyo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg pb-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/n-seoul-tower.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">N Seoul Tower</h5>
+                        <p class="card-text">N Seoul Tower is a communication and observation tower located on Namsan
+                            Mountain in central Seoul, South Korea. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function inputOnchange() {
+        const userInput = document.getElementById('user-input');
+        const bannerText = document.getElementById('banner-text');
+
+        bannerText.innerHTML = "Hello, " + userInput.value
+    }
+
+</script>
+
+</html>
